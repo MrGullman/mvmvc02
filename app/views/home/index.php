@@ -1,8 +1,6 @@
-<?php $this->setSiteTitle('Jeppes Test MVC'); ?>
-<?php $this->start('head'); ?>
-<meta content="test">
-<?php $this->end(); ?>
+
 <?php $this->start('body'); ?>
-<h2 class="center-align">Welcome To Gullman MVC</h2>
-<h5 class="center-align">That uses Materialize CSS</h5>
+<h1 class=" display-4 text-center text-secondary">Welcome to Gullman MVC Framework!</h1>
+<p class="lead text-center">With Bootstrap 4 CSS Framwork</p>
+
 <?php $this->end(); ?>

@@ -1,30 +1,27 @@
 <?php
 
-// Gullman MVC Configuration Settings
+  define('DEBUG', true); // set debug to false for production
 
-// Debug Mode
-define('DEBUG', true);
+  // this should be set to false for security reasons. If you need to run migrations from the browser you can set this to true, then run migrations, then set it back to false.
+  define('RUN_MIGRATIONS_FROM_BROWSER', false);
 
+  define('DB_NAME', 'mymvc'); // database name
+  define('DB_USER', 'root'); // database user
+  define('DB_PASSWORD', '1234'); // database password
+  define('DB_HOST', '127.0.0.1'); // database host *** use IP address to avoid DNS lookup
+  define('DB_CHAR', 'utf8mb4');
 
-// DB Setting
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'mymvc');
-define('DB_USER', 'root');
-define('DB_PASS', '1234');
-define('DB_CHAR', 'utf8mb4');
+  define('DEFAULT_CONTROLLER', 'Home'); // default controller if there isn't one defined in the url
+  define('DEFAULT_LAYOUT', 'default'); // if no layout is set in the controller use this layout.
 
-// MVC Setting
-define('DEFAULT_CONTROLLER', 'Home');
-define('DEFAULT_LAYOUT', 'default');
+  define('PROOT', '/mymvc_02/'); // set this to '/' for a live server.
+  define('VERSION','0.0.'); // release version this can be used to display version or version assets like css and js files useful for fighting cached browser files
 
-define('PROOT', '/mymvc_02/');
-define('VERSION', '0.0.1');
+  define('SITE_TITLE', 'Gullman MVC Framework'); // This will be used if no site title is set
+  define('MENU_BRAND', 'MrG'); //This is the Brand text in the menu
 
-define('SITE_TITLE', 'MYMVC 02 ' . VERSION);
-define('MENU_BRAND', 'MYMVC');
+  define('CURRENT_USER_SESSION_NAME', 'kwXeusqldkiIKjehsLQZJFKJ'); //session name for logged in user
+  define('REMEMBER_ME_COOKIE_NAME', 'JAJEI6382LSJVlkdjfh3801jvD'); // cookie name for logged in user remember me
+  define('REMEMBER_ME_COOKIE_EXPIRY', 2592000); // time in seconds for remember me cookie to live (30 days)
 
-
-
-
-
-?>
+  define('ACCESS_RESTRICTED', 'Restricted'); //controller name for the restricted redirect
