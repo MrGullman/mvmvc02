@@ -7,7 +7,7 @@
   // load configuration and helper functions
   require_once(ROOT . DS . 'config' . DS . 'config.php');
   $isCli = php_sapi_name() == 'cli';
-  if(!RUN_MIGRATIONS_FROM_BROWSER && !$isCli) die('restricted'); // Disable this row when run migrations from XAMPP
+  // if(!RUN_MIGRATIONS_FROM_BROWSER && !$isCli) die('restricted'); // Disable this row when run migrations from XAMPP
 
   function autoload($className){
     $classAry = explode('\\',$className);

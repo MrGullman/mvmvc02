@@ -1,0 +1,12 @@
+{
+  "Dashboard" : "admindashboard/index/1",
+  "Posts" : {
+    "My Posts" : "adminposts/index",
+    "Add Post" : "adminposts/add"
+  },
+  "Booking" : {
+    "My Bookings" : "adminbookings/index",
+    "Add Booking" : "adminbookings/add"
+  },
+  "Frontend" : "home/index"
+}

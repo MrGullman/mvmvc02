@@ -1,0 +1,104 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  width: 100%;
+}
+
+h2 {
+  color: #17a2b8;
+  text-align: right;
+  font-weight: 300;
+}
+
+h3 {
+  color: #17a2b8;
+  font-weight: 400;
+}
+
+h4 {
+  color: #444;
+  font-weight: 400
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+tr {
+  background-color: none;
+  width: 100%;
+}
+
+td.p-info {
+  padding-right: 5px;
+  vertical-align: text-top;
+}
+
+h5.h5-info {
+  font-size: 0.9rem;
+  color: #17a2b8;
+  font-weight: 400;
+}
+
+tr td p {
+  font-size: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  display: block;
+  width: 100%;
+}
+
+.bookingIncludes {
+  font-size: 1.1rem;
+}
+
+.infoText{
+  max-width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding-right: 15mm;
+}
+
+.infoText-p {
+  font-size: 0.8rem;
+  margin: 0 5px;
+}
+
+.contact-p {
+  font-size: 0.6rem;
+  color: #444;
+}
+
+.contact-p-name {
+  padding-top: 15px;
+  color: #17a2b8;
+}
+
+.headerImg {
+  height: 60px;
+  width: auto;
+}
+
+.tableHeading {
+  color: #17a2b8;
+  line-height: 3rem;
+  font-weight: 300;
+}
+
+
+

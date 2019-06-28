@@ -1,7 +1,6 @@
 <?php
 use Core\FH;
 use Core\H;
-H::dnd($this->newUser);
 ?>
 <?php $this->start('head'); ?>
 <?php $this->end(); ?>

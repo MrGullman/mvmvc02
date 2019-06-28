@@ -119,4 +119,8 @@ class Users extends Model {
     }
     return true;
   }
+
+  public function displayUsername() {
+    return $this->fname . ' ' . $this->lname;
+  }
 }

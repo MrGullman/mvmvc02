@@ -2,19 +2,26 @@
   "Guest" : {
     "denied" : {},
     "Home" : ["*"],
+    "Contact Us" : ["*"],
     "Register" : ["login", "register"],
-    "Restricted" : ["*"]
+    "Restricted" : ["*"],
+    "Error" : ["*"]
   },
   "LoggedIn" : {
     "denied" : {
-      "Register" : ["login", "register"]
+      "Register" : ["login", "register", "admin"]
     },
-    "Register" : ["logout"],
-    "Contacts" : ["*"]
+    "Contact Us" : ["*"],
+    "Register" : ["logout", "settings"],
+    "Contacts" : ["*"],
+    "Error" : ["*"]
   },
   "SuperAdmin" : {
     "denied" : {},
-    "Admindashboard" : ["*"]
+    "Admindashboard" : ["*"],
+    "Adminposts" : ["*"],
+    "Adminbookings" : ["*"],
+    "Error" : ["*"]
   }
 
 }

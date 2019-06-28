@@ -258,7 +258,7 @@ class FH {
   public static function optionsForSelect($options,$selectedValue){
     $html = "";
     foreach($options as $value => $display){
-      $selStr = ($selectedValue == $value)? ' selected="selected"' : '';
+      $selStr = ((int)$selectedValue == $value)? ' selected="selected"' : '';
       $html .= '<option value="'.$value.'"'.$selStr.'>'.$display.'</option>';
     }
     return $html;

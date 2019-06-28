@@ -1,0 +1,15 @@
+{
+    "name": "larss/mymvc_02",
+    "description": "Gullman MVC",
+    "authors": [
+        {
+            "name": "Jesper Gullman",
+            "email": "jesper.gullman@outlook.com"
+        }
+    ],
+    "require": {
+        "tinymce/tinymce" : ">= 4",
+        "phpmailer/phpmailer" : "~6.0",
+        "mpdf/mpdf": "^8.0"
+    }
+}

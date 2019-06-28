@@ -1,7 +1,9 @@
 {
   "Home" : "home",
+  "Contact Us" : "home/contact",
   "Contacts" : {
     "My Contacts" : "contacts",
     "Add Contact" : "contacts/add"
-  }
+  },
+  "Admin" : "admindashboard/index/1"
 }

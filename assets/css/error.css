@@ -1,0 +1,92 @@
+/*
+ *   General Error stylesheet
+ *   Basic Functional styling
+ *   Author: Jesper Gullman (jesper.gullman@outlook.com)
+ *   Version: 0.1
+ *   Date: 2019-06-23
+ *   Copyright: Jesper Gullman
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:100,300,400,500,700');
+
+/*
+ *   Imported Fonts
+ *   - Roboto
+ *   - Montserrat
+ */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+
+.error-container .img-container {
+  width: 40%;
+}
+
+.error-container .text-container {
+  width: 60%;
+  text-align: center;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}

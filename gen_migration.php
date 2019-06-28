@@ -1,5 +1,5 @@
 <?php
-  if (php_sapi_name() != 'cli') die('Restricted');  // Disable this row when run migrations from XAMPP
+  // if (php_sapi_name() != 'cli') die('Restricted');  // Disable this row when run migrations from XAMPP
   define('DS', DIRECTORY_SEPARATOR);
   define('ROOT', dirname(__FILE__));
   $fileName = "Migration".time();

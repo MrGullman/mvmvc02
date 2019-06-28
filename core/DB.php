@@ -112,6 +112,7 @@ class DB {
       $offset = ' OFFSET ' . $params['offset'];
     }
     $sql = "SELECT {$columns} FROM {$table}{$joins}{$conditionString}{$order}{$limit}{$offset}";
+    // H::dnd($sql);
     if($this->query($sql, $bind,$class)) {
       if(!count($this->_result)) return false;
       return true;
@@ -206,6 +207,7 @@ class DB {
     $alias = $join[2];
     $type = (isset($join[3]))? strtoupper($join[3]) : "INNER";
     $jString = "{$type} JOIN {$table} {$alias} ON {$condition}";
+
     return " " . $jString;
   }
 }
