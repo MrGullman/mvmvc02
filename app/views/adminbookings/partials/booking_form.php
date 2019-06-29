@@ -1,5 +1,6 @@
 <?php
-  use Core\{FH,H};
+  use Core\FH;
+  use Core\H;
 ?>
 
 <form action="<?=$this->formAction?>" method="POST" class="form">

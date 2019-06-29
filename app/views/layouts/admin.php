@@ -14,6 +14,12 @@ use Core\FH;
     <link rel="stylesheet" href="<?=PROOT?>assets/css/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="<?=PROOT?>assets/css/custom.css?v=<?=VERSION?>" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="<?=PROOT?>assets/css/alertMsg.min.css?v=<?=VERSION?>" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="<?=PROOT?>assets/js/jquery-ui/jquery-ui.min.css"> -->
+    <script src="<?=PROOT?>assets/js/jQuery-3.3.1.min.js"></script>
+    <script src="<?=PROOT?>assets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="<?=PROOT?>assets/js/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="<?=PROOT?>assets/js/bootstrap4/bootstrap.min.js"></script>
+    <script src="<?=PROOT?>assets/js/alertMsg.min.js?v=<?=VERSION?>"></script>
 
     <?= $this->content('head'); ?>
 
@@ -24,9 +30,6 @@ use Core\FH;
       <?= Session::displayMsg() ?>
       <?= $this->content('body'); ?>
     </div>
-    <script src="<?=PROOT?>assets/js/jQuery-3.3.1.min.js"></script>
-    <script src="<?=PROOT?>assets/js/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="<?=PROOT?>assets/js/bootstrap4/bootstrap.min.js"></script>
-    <script src="<?=PROOT?>assets/js/alertMsg.min.js?v=<?=VERSION?>"></script>
+
   </body>
 </html>

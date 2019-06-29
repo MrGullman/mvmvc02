@@ -5,6 +5,7 @@ use Core\H;
 use App\Lib\Utilities\CreatePdf;
 use App\Lib\Utilities\Mailer;
 use App\Models\Paginate;
+use App\Models\Sales;
 
 class AdmindashboardController extends Controller {
 
@@ -31,6 +32,22 @@ class AdmindashboardController extends Controller {
     // $this->view->posts = $value;
     // $this->view->links = $links;
     $this->view->render('admindashboard/index');
+  }
+
+  public function getStatsAction(){
+    $range = $this->request->get('range');
+    $sales = Sales::getDailySales($range);
+    $labels = [];
+    $data = [];
+    foreach($sales as $tx){
+      $labels[] = $tx->booking_date;
+      $data[] = $tx->price;
+    }
+
+    $resp = ['data'=>$data, 'labels'=>$labels];
+
+    $this->jsonResponse($resp);
+
   }
 }
 

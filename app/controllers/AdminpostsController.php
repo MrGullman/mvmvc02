@@ -103,7 +103,15 @@ class AdminpostsController extends Controller {
       $post->user_id = $this->currentUser->id;
       $post->save();
       if($post->validationPassed()){
-
+        if($isFiles){
+          // Upload images
+          PostImages::uploadPostImages($post->id, $uploads);
+        }
+        $sortOrder = json_decode($_POST['images_sorted']);
+        PostImages::updateSortByPostId($post->id, $sortOrder);
+        // Redirect
+        Session::addMsg('success', 'Post Updated!');
+        Router::redirect('adminposts');
       }
     }
 
@@ -137,6 +145,22 @@ class AdminpostsController extends Controller {
     }
 
     $this->jsonResponse($response);
+  }
+
+  public function deleteImageAction(){
+    $resp = ['success' => false];
+    if($this->request->isPost()){
+      $user = Users::currentUser();
+      $id = $this->request->get('image_id');
+      $image = PostImages::findById((int)$id);
+      $post = Posts::findByIdAndUserId((int)$image->post_id, (int)$user->id);
+      if($post && $image){
+        PostImages::deleteImages($image->id);
+        $image->delete();
+        $resp = ['success' => true, 'msg' => 'Image was deleted!', 'model_id' => $image->id];
+      }
+    }
+    $this->jsonResponse($resp);
   }
 }
 

@@ -15,6 +15,5 @@
       $this->addTimeStamps($table);
       $this->addIndex($table, 'user_id');
       $this->addIndex($table, 'category_id');
-      $this->addIndex($table, 'private');
     }
   }

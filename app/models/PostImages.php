@@ -69,6 +69,18 @@ class PostImages extends Model {
     ]);
   }
 
+  public static function updateSortByPostId($post_id, $sortOrder=[]){
+    $images = self::findByPostId($post_id);
+    $i = 0;
+    foreach($images as $image){
+      $val = 'image_'.$image->id;
+      $sort = (in_array($val, $sortOrder)) ? array_search($val, $sortOrder) : $i;
+      $image->sort = $sort;
+      $image->save();
+      $i++;
+    }
+  }
+
 
 
   // public function validateImages($images){

@@ -27,6 +27,15 @@
       </div>
 
       <?php $this->partial('adminposts','editImages') ?>
+
+      <div class="row p-3">
+        <?= FH::inputBlock('file',"Upload PostImages:",'postImages[]','',['class'=>'form-control-file','multiple'=>'multiple'],['class'=>'form-group col-md-6'], $this->displayErrors) ?>
+      </div>
+
+      <div class="col-md-12 text-right">
+        <a href="<?=PROOT?>adminposts" class="btn btn-secondary">Cancel</a>
+        <?= FH::submitTag('Save', ['class'=>'btn btn-info']) ?>
+      </div>
     </form>
   </div>
 </div>

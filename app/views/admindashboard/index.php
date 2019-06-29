@@ -7,8 +7,62 @@
 <?php $this->end() ?>
 <?php $this->start('body'); ?>
   <h1>Dashboard</h1>
-  <!-- <?php foreach($this->posts->data as $post) : ?>
-    <?= $post->fname . ' ' . $post->lname .','; ?>
-  <?php endforeach; ?>
-  <?= $this->links; ?> -->
+  <div class="row">
+  <div class="col-12">
+    <div class="form-group col-2 offset-10">
+      <select id="dateRangeSelector" class="form-control form-control-sm">
+        <option value="last-0">Today</option>
+        <option value="last-7">Last 7 Days</option>
+        <option value="last-28" selected="selected">Last 28 Days</option>
+        <option value="last-90">Last 90 Days</option>
+        <option value="last-365">Last 365 Days</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-12">
+    <canvas id="dailySalesChart" width="400" height="130" class="chartjs"></canvas>
+  </div>
+</div>
+
+<script>
+  function loadDailySalesChart(){
+    var range = jQuery('#dateRangeSelector').val();
+    jQuery.ajax({
+      url : '<?=PROOT?>admindashboard/getStats',
+      method : "POST",
+      data : {range:range},
+      success : function(resp){ console.log(resp);
+
+
+        var ctx = document.getElementById('dailySalesChart');
+        var data = {
+          labels: resp.labels,
+          datasets: [
+            {
+              "label":"Daily Sales",
+              "data" : resp.data,
+              "fill":false,
+              "borderColor":"rgb(75, 192, 192)",
+              "lineTension":0.1
+            }
+          ]
+        };
+        var options = {};
+        var myLineChart = new Chart(ctx, {
+          type: 'line',
+          data: data,
+          options: options
+        });
+      }
+    });
+  }
+
+  document.getElementById('dateRangeSelector').addEventListener("change",function(){
+    loadDailySalesChart();
+  });
+
+  $('document').ready(function(){
+    loadDailySalesChart();
+  })
+</script>
 <?php $this->end(); ?>

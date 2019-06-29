@@ -1,6 +1,8 @@
 <?php
 namespace App\Models;
-use Core\{Model,DB,H};
+use Core\Model;
+use Core\DB;
+use Core\H;
 use Core\Validators\RequiredValidator;
 use Core\Validators\MaxValidator;
 use Models\Category;
